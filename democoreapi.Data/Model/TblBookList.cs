@@ -18,4 +18,7 @@ namespace democoreapi.Data.Model
         public string bName { get; set; }
         public string bType { get; set; }
     }
+
+
+
 }
