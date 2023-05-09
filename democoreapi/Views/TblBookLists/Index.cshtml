@@ -1,0 +1,55 @@
+﻿@model IEnumerable<democoreapi.Data.Model.TblBookList>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.bCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.bName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.bType)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.bCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bType)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Bid">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Bid">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Bid">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</body>
+</html>

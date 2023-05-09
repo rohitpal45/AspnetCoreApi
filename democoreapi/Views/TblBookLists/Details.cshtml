@@ -1,0 +1,45 @@
+﻿@model democoreapi.Data.Model.TblBookList
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+
+<div>
+    <h4>TblBookList</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.bCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.bCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.bName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.bName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.bType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.bType)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Bid">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
+</body>
+</html>
